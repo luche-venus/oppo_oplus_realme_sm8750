@@ -24,7 +24,7 @@ index b275cd285182..f03e0d5e49c1 100644
  #endif
  #ifdef CONFIG_DETECT_HUNG_TASK
  	unsigned long			last_switch_count;
-@@ -1513,9 +1513,15 @@ struct task_struct {
+@@ -1513,8 +1513,14 @@ struct task_struct {
  	ANDROID_KABI_RESERVE(3);
  	ANDROID_KABI_RESERVE(4);
  	ANDROID_KABI_RESERVE(5);
@@ -38,5 +38,4 @@ index b275cd285182..f03e0d5e49c1 100644
  	ANDROID_KABI_RESERVE(8);
 +#endif
  
- 	/*
- 	 * New fields for task_struct should be added above here, so that
+ #ifdef CONFIG_RV
